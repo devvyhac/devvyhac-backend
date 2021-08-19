@@ -1,0 +1,22 @@
+{
+  "name": "hng-backend-task",
+  "version": "1.0.0",
+  "description": "backend functionality for the resume",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Ismail Abdulqudus (Devvyhac)",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "joi": "^17.4.2",
+    "mongoose": "^5.13.7",
+    "nodemailer": "^6.6.3",
+    "xoauth2": "^1.2.0"
+  }
+}
