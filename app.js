@@ -55,8 +55,8 @@ app.post("/contact", async (req, res) => {
       from: `"Abdulqudus Ismail" <${process.env.EMAIL}>`,
       to: payload.email,
       subject: "Response from Abdulqudus Ismail (Devvyhac)",
-      text: "Thanks for contacting me, I will get back to you in the next 24hours.",
-      html: `You can contact also me on <a href="www.linkedin.com/in/abdulqudus-ismail">Linkedin</a>`
+      html: `Thanks for contacting me, I will get back to you in the next 24hours. \n 
+      You can contact also me on <a href="www.linkedin.com/in/abdulqudus-ismail">Linkedin</a>`
     };
 
     await mailer.sendMail(emailOptions);
