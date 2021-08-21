@@ -9,8 +9,6 @@ const validator = Joi.object({
     email: Joi.string()
         .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net']}})
         .required(),
-
-    subject: Joi.string().required(),
     message: Joi.string().required(),
 });
 

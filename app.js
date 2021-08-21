@@ -32,7 +32,6 @@ const ContactSchema = new Schema({
 
 	fullname: {type: String, require: true},
 	email: {type: String, require: true},
-	subject: {type: String, require: true},
 	message: {type: String, require: true}
 
 })
@@ -61,9 +60,9 @@ app.post("/contact", async (req, res) => {
 
     await mailer.sendMail(emailOptions);
     
-    const { fullname, email, subject, message } = payload;
+    const { fullname, email, message } = payload;
 
-    Contact.create({ fullname, email, subject, message }, (error, newData) => {
+    Contact.create({ fullname, email, message }, (error, newData) => {
 	
       if (error) return res.json({
         type: "error",
